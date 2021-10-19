@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title>Linear regression homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#F2D7D5 ">
+<div class="form">
+ <form action="/predict" method="POST">
+  <div class="card-header">
+      <a class="card-header" href="/"><b>Linear Regression Model</b></a>
+  </div>
+
+<!--<div class="mb-3">-->
+<!--  <label for="DatasetFile" class="form-label">Enter the csv file location</label>-->
+<!--  <input type="file" class="form-control" name="DatasetFile" id="DatasetFile">-->
+<!--<select class="form-select form-select-sm" aria-label=".form-select-sm example" name="NanImputer" id="NanImputer">-->
+
+<!--  <option selected>Choose the Nan imputer option</option>-->
+<!--  <option value="1">Fill Nan values with column Mean</option>-->
+<!--  <option value="2">Fill Nan values with column Median</option>-->
+<!--  <option value="3">Fill Nan values with row Mean</option>-->
+<!--  <option value="4">Fill Nan values with row Median</option>-->
+<!--  <option value="5"> Fill Nan values with random value from column</option>-->
+<!--</select>-->
+
+  <a class="btn btn-dark" href="/pandasprofileEDA" role="button" target="_blank">Click to see EDA reports</a>
+<div class="form-check form-switch">
+<div>
+    <p>Enter the feature values to be predicted</p>
+    <input type="text" id="process temperature" name="process temperature" placeholder="process temperature" required="required">
+     <input type="text" id="Rotational speed" name="Rotational speed" placeholder="Rotational speed" required="required">
+     <input type="text" id="Torque" name="Torque" placeholder="Torque" required="required">
+</div>
+<!--&lt;!&ndash;  <label class="form-check-label" for="scaling required">Do you want to scale the values in the dataset</label>&ndash;&gt;-->
+<!--<p style="margin-right:100px">Do you want scaling for your dataset:</p>-->
+<!--    <div>-->
+<!--    <input class="form-check-input" type="radio" id="scaling required" name="scaling required" value="yes"style="">-->
+<!--    <label for="scaling required" style="margin-right:16px">Yes</label>-->
+<!--    <input class="form-check-input" type="radio" id="scaling not required" name="scaling required" value="no">-->
+<!--     <label for="scaling not required" style="margin-right:16px">No</label>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<label for="split ratio">Split ratio:</label>-->
+<!--  <input type="text" id="Split ratio" name="split ratio" placeholder="0.2 for 20% test and 80% train"><br><br>-->
+<!--<label for="features list">Enter the features required</label>-->
+<!--  <input type="text" id="features list" style="width: 1000px" name="features list" placeholder="Please consider comma (,) as delimeter"><br><br>-->
+<!--<label for="label list">Enter labels</label>-->
+<!--  <input type="text" id="label list" name="label list"><br><br>-->
+
+<div>
+    <p> </p>
+<input type="submit" class="btn btn-outline-dark btn-sm mx-1" value="Predict">
+</div>
+    <br>
+    <br>
+    {{predicted_text}}
+
+</body>
+</html>
